@@ -1,0 +1,13 @@
+footer{
+    bottom: 0;
+    width: 100%;
+    @include flex(space-around);
+    padding: 1rem 0;
+    img{
+        width: 75px;
+    }
+    p{
+        font-size: 14px;
+    }
+    background-color: $gray3;
+}

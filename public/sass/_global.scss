@@ -1,0 +1,57 @@
+//*************************************************************
+// Global
+//*************************************************************
+
+@include reset-css;
+@font-face {
+    font-family: "rubik";
+    src: url("../font/Rubik.ttf");
+}
+body{
+    font-family: "rubik";
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+}
+p{
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.display-none{
+    display: none;
+}
+
+main{
+    max-width: 70vw;
+    margin: 0 auto;
+    // min-height: calc(100vh - 220px - 110px);
+}
+
+
+h3{
+    font-size: 24px ;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    padding: 10px 20px;
+    color: black;
+    font-size: 12px;
+    border: 1px solid black;
+    display: inline-block;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    background: none;
+    border-radius: 7px;
+}
+.btn:hover{
+    background-color: $firstcolor;
+    color: white;
+    cursor: pointer;
+}

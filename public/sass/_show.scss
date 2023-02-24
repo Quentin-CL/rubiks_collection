@@ -1,0 +1,95 @@
+.rubiks-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    padding: 2rem 1rem;
+}
+#rubiks{
+    .card-image{
+        max-width:100%;
+        img{
+            width: 100%;
+        }
+    }
+    &>*:not(.card-image, .link-group){
+        border: 1px solid #f2f2f2;
+    }
+    p:first-of-type{
+        border-radius: 7px 7px 0 0;
+    }
+    p:last-of-type{
+        border-radius: 0 0 7px 7px;
+    }
+    p{
+        padding: 10px;
+        font-weight: 200;
+    }
+    .title{
+        strong{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+    }
+    .card-user{
+        color: $gray2;
+    }
+    .date{
+        background-color: #f2f2f2;
+        color: $gray1;
+    }
+    .link-group{
+        @include flex(end);
+        gap: 1rem;
+        a{
+            font-size: 22px;
+        }
+    }
+}
+.commentaire{
+    border: 1px solid #f2f2f2;
+    padding: 1rem 10px;
+    p:first-of-type{
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    span{
+        font-weight: 200;
+        color: $gray2;
+        font-size: 12px;
+        text-transform: none;
+    }
+    .starability-result{
+        transform: scale(0.7);
+        margin: 6px 0 6px -23px;
+    }
+    p:last-of-type{
+        font-weight: 200;
+        font-size: 14px;
+    }
+}
+
+.new-commentaire{
+    border: 1px solid #f2f2f2;
+    padding: 1rem 10px;
+    p{
+        font-weight: 700;
+    }
+    .starability-checkmark{
+        transform: scale(0.8);
+        margin: 0 0 0 -16px;
+        min-height: 40px;
+    }
+    textarea{
+        width: 100%;
+        min-height: 100px;
+        border-radius: 7px;
+        border-color: $gray2;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    button{
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,57 @@
+#login, #create-account, #create-post, #update-post{
+    @include flex($dir:column);
+    gap: 2rem;
+    margin: 2rem auto;
+    h1{
+        font-size: 24px;
+        margin: 1rem auto;
+    }
+    form{
+        @include flex($dir:column);
+        gap: 1rem;
+        padding: 3rem;
+        background-color: $gray3;
+        border: 1px solid $gray3;
+        border-radius: 7px;
+        box-shadow: 1px 1px 10px 3px rgba(0,0,0,0.2);
+        width: max-content;
+        div{
+            width: 100%;
+            @include flex(space-between);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        select, input:not(input[type="submit"]){
+            height: 25px;
+            width: 250px;
+            border-radius: 4px;
+            border: 1px solid $gray1;
+            margin-left: 1rem;
+        }
+    }
+}
+#update-post{
+    img{
+        max-width: 200px;
+    }
+}
+.form-control.success input {
+    border-color: $success-color !important;
+}
+
+.form-control.error input {
+    border-color: $error-color !important;
+}
+
+.form-control small {
+    color: $error-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    font-size: 12px;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
