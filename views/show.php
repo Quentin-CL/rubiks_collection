@@ -20,10 +20,12 @@ if (!empty($articleById)) {
     <main>
         <div class="rubiks-container">
             <section id="rubiks">
-                <div class="link-group">
-                    <a href="./update_post.php?id=<?= $id ?>"><i class="fa-regular fa-pen-to-square"></i></a>
-                    <a href="../moteur/destroy_post.php?id=<?= $id ?>"><i class="fa-regular fa-circle-xmark"></i></a>
-                </div>
+                <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] === $articleById["user_id"]) { ?>
+                    <div class="link-group">
+                        <a href="./update_post.php?id=<?= $id ?>"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a href="../moteur/destroy_post.php?id=<?= $id ?>"><i class="fa-regular fa-circle-xmark"></i></a>
+                    </div>
+                <?php } ?>
                 <div class="card-image"><img src="../public/img/article/<?= $articleById['image'] ?>" alt="Une image de Rubik's cube"></div>
                 <p class="title"><strong><?= $articleById['title'] ?></strong><br><?= $articleById['description'] ?></p>
                 <p class="card-user">Proposé par <?= $articleById['nom'] . ' ' . $articleById['prenom'] ?></p>
